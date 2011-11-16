@@ -1,3 +1,6 @@
+require File.expand_path("../../../../lib/tolk/sync.rb", __FILE__)
+require File.expand_path("../../../../lib/tolk/import.rb", __FILE__)
+
 module Tolk
   class Locale < ActiveRecord::Base
     set_table_name "tolk_locales"
