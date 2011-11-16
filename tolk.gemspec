@@ -2,14 +2,14 @@ Gem::Specification.new do |s|
   s.name        = 'tolk'
   s.version     = '1.0'
   s.summary     = 'Rails engine providing web interface for managing i18n yaml files'
-  s.description = 'Tolk is a web interface for doing i18n translations packaged as an engine for Rails applications.'
+  s.description = 'Tolk is a web interface for doing i18n translations packaged as an engine for Rails applications. This fork depends on will_paginate version 3.0.2'
 
   s.author = 'David Heinemeier Hansson'
-  s.email = 'david@loudthinking.com'
+  s.email = 'rcavandijk@gmail.com'
   s.homepage = 'http://www.rubyonrails.org'
 
   s.platform = Gem::Platform::RUBY
-  s.add_dependency('will_paginate', '3.0.pre')
+  s.add_dependency('will_paginate', '3.0.2')
   s.add_dependency('ya2yaml', '~> 0.26')
 
   s.files = Dir['README', 'MIT-LICENSE', 'config/routes.rb', 'init.rb', 'lib/**/*', 'app/**/*', 'public/tolk/**/*']
