@@ -1,3 +1,7 @@
+require File.expand_path("../../../app/models/tolk/locale.rb", __FILE__)
+require File.expand_path("../../../app/models/tolk/phrase.rb", __FILE__)
+require File.expand_path("../../../app/models/tolk/translation.rb", __FILE__)
+
 namespace :tolk do
   desc "Add database tables, copy over the assets, and import existing translations"
   task :setup => :environment do
