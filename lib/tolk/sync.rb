@@ -13,6 +13,7 @@ module Tolk
         I18n.available_locales # force load
         translations = flat_hash(I18n.backend.send(:translations)[primary_locale.name.to_sym])
         filter_out_i18n_keys(translations.merge(read_primary_locale_file))
+        filter_out_faker_keys translations
       end
 
       def read_primary_locale_file
@@ -68,6 +69,10 @@ module Tolk
 
       def filter_out_i18n_keys(flat_hash)
         flat_hash.reject { |key, value| key.starts_with? "i18n" }
+      end
+
+      def filter_out_faker_keys(flat_hash)
+        flat_hash.reject { |key, value| key.starts_with? "faker." }
       end
     end
   end
